@@ -1,4 +1,4 @@
-const APP_URL = process.env.APP_URL || 'http://localhost:3000';
+const APP_URL = 'https://ca-immigration-chat-bot.netlify.app';
 
 fetch(`${APP_URL}`)
   .then((response) => response.text())
