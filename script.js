@@ -1,4 +1,4 @@
-const APP_URL = 'http://ca-immigration-chat-bot.netlify.app';
+const APP_URL = 'https://ca-immigration-chat-bot.netlify.app';
 
 fetch(`${APP_URL}`)
   .then((response) => response.text())
