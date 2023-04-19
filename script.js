@@ -1,5 +1,5 @@
-// const APP_URL = 'https://ca-immigration-chat-bot.netlify.app';
-const APP_URL = "http://localhost:3000";
+const APP_URL = process.env.APP_URL || 'http://localhost:3000';
+
 fetch(`${APP_URL}`)
   .then((response) => response.text())
   .then((html) => {
