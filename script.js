@@ -1,4 +1,4 @@
-const APP_URL = 'https://ca-immigration-chat-bot.netlify.app';
+const APP_URL = 'http://ca-immigration-chat-bot.netlify.app';
 
 fetch(`${APP_URL}`)
   .then((response) => response.text())
@@ -23,6 +23,12 @@ function processAppHTML(html) {
     const newScript = document.createElement("script");
     newScript.src = appendHost(script.src);
     document.head.appendChild(newScript);
+  });
+  
+  const styles = container.querySelectorAll("link");
+  styles.forEach((style) => {
+    style.href = appendHost(style.href);
+    document.head.appendChild(style);
   });
   
   const rootDiv = container.querySelector("#root");
